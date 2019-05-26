@@ -43,6 +43,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :groups, through: :members
+- has_many :members
 - has_many :messages
 
 
@@ -53,6 +54,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :users, through: :members
+- has_many :members
 - has_many :messages
 
 
@@ -61,8 +63,8 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
-|text|text|none|
-|image|text|none|
+|text|text|     |
+|image|text|    |
 
 ### Association
 - belongs_to :group
