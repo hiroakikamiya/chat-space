@@ -3,8 +3,7 @@
     height: 100%;
     background-color: hsl(214, 27%, 25%);
     float: left;
-
-  &__sidebar-top{
+  .sidebar-top{
       background-color: #253141;
       height: 100px;
       padding: 0 20px;
@@ -14,20 +13,23 @@
         font-size: 16px;
         line-height: 100px;
     }
-  }
-  &__pencil-icon{
-      color: $sidebar-text-color;
-      line-height: 100px;
+    &__lists{
+      display: flex;
       margin-right: 0;
       margin-left: auto; 
+      .pencil-icon{
+          color: $sidebar-text-color;
+          line-height: 100px;
+      }
+      .gear-icon{
+          color: $sidebar-text-color;
+          line-height: 100px;
+          margin-right: 0;
+          margin-left: 5px; 
+      }
+    }
   }
-  &__gear-icon{
-      color: $sidebar-text-color;
-      line-height: 100px;
-      margin-right: 0;
-      margin-left: 5px; 
-  }
-  &__group-box{
+  .group-box{
       padding: 20px 20px 40px;
       color: $sidebar-text-color;
     &__group-title{
