@@ -1,0 +1,32 @@
+%body
+  %div.sidebar
+    %div.sidebar__sidebar-top
+      %h2.sidebar__sidebar-top__user-name
+        KAMIYA
+      = fa_icon "pencil-square-o", class: 'sidebar__sidebar-top__pencil-icon'
+      = fa_icon "gear", class: 'sidebar__sidebar-top__gear-icon'
+    %div.sidebar__group-box
+      %h3.sidebar__group-box__group-title
+        test
+      %p.sidebar__group-box__first-text
+        text,text
+  %div.contents
+    %div.content-top
+      %h2.content-top__group-name
+        group_name
+        %div.content-top__member-name
+          kamiyahiroaki
+      %div.content-top__link-box
+        %div.content-top__lin-box__link-text
+          Edit
+    %div.main-content
+    %div.form-box
+      %div.form-box__text-area
+        %div.form-box__text-area__text
+          text_area
+        %label.form-box__text-area__link-box
+          %input.form-box__text-area__link-box--file{type: "file"}
+          =fa_icon "photo", class: 'form-box__text-area__link-box--photo-icon'
+      %div.form-box__sent-buttom
+        %div.form-box__sent-buttom__text
+          Sent
