@@ -1,0 +1,39 @@
+.sidebar{
+    width: 300px;
+    height: 100%;
+    background-color: hsl(214, 27%, 25%);
+    float: left;
+
+  &__sidebar-top{
+      background-color: #253141;
+      height: 100px;
+      padding: 0 20px;
+      display: flex;
+    &__user-name{
+        color: $sidebar-text-color;
+        font-size: 16px;
+        line-height: 100px;
+    }
+  }
+  &__pencil-icon{
+      color: $sidebar-text-color;
+      line-height: 100px;
+      margin-right: 0;
+      margin-left: auto; 
+  }
+  &__gear-icon{
+      color: $sidebar-text-color;
+      line-height: 100px;
+      margin-right: 0;
+      margin-left: 5px; 
+  }
+  &__group-box{
+      padding: 20px 20px 40px;
+      color: $sidebar-text-color;
+    &__group-title{
+        padding-bottom: 5px;
+        font-size: 15px;
+    }
+  }
+}
+
