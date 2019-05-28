@@ -4,37 +4,36 @@
     background-color: hsl(214, 27%, 25%);
     float: left;
 
-  .sidebar__sidebar-top{
+  &__sidebar-top{
       background-color: #253141;
       height: 100px;
       padding: 0 20px;
       display: flex;
-    .sidebar__sidebar-top__user-name{
+    &__user-name{
         color: $sidebar-text-color;
         font-size: 16px;
         line-height: 100px;
     }
   }
-  .sidebar__sidebar-top__pencil-icon{
+  &__pencil-icon{
       color: $sidebar-text-color;
       line-height: 100px;
       margin-right: 0;
       margin-left: auto; 
   }
-  .sidebar__sidebar-top__gear-icon{
+  &__gear-icon{
       color: $sidebar-text-color;
       line-height: 100px;
       margin-right: 0;
       margin-left: 5px; 
   }
-  .sidebar__group-box{
+  &__group-box{
       padding: 20px 20px 40px;
       color: $sidebar-text-color;
-    .sidebar__group-box__group-title{
+    &__group-title{
         padding-bottom: 5px;
         font-size: 15px;
     }
   }
-
 }
 
