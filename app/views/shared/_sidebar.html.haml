@@ -1,0 +1,15 @@
+%div.sidebar
+  %div.sidebar-top
+    %h2.sidebar-top__user-name
+      = current_user.name
+    %ul.sidebar-top__lists
+      %li.list
+        = fa_icon "pencil-square-o", class: 'pencil-icon'
+      %li.list
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'gear-icon'
+  %div.group-box
+    %h3.group-box__group-title
+      test
+    %p.group-box__first-text
+      text,text
