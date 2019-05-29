@@ -29,13 +29,22 @@
       }
     }
   }
-  .group-box{
-      padding: 20px 20px 40px;
-      color: $sidebar-text-color;
-    &__group-title{
-        padding-bottom: 5px;
-        font-size: 15px;
+  .groups{
+      height: calc(100vh - 100px);
+      padding: 0 20px;
+    .group {
+        box-sizing: border-box;
+        padding: 20px 0 40px;
+      &__group-name {
+          font-size: 15px;
+          color: $sidebar-text-color;
+      }
+      &__first-message {
+          color: $sidebar-text-color;
+          margin-top: 5px;
+      }
     }
   }
 }
+
 
