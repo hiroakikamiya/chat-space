@@ -31,13 +31,14 @@
         }
      }
   }
-  .main-content{
+  .messages{
       height: 100vh;
       height: calc(100vh - 100px);
       width: 100%;
       width: calc(100% - 80px);
       background-color: #fafafa;
       padding: 0 40px;
+      overflow: auto;
   }
   .form-box{
       position: absolute;
@@ -47,7 +48,65 @@
       width: 100%;
       width: calc(100% - 80px);
       padding: 0 40px;
-      display: flex;
+    .new_message{
+        position: relative;
+        display: flex;
+        height: 100%;
+        width: 100%;
+      .form-box__message{
+          height: 50px;
+          margin: auto;
+          width: 100%;
+          width: calc(100% - 115px);
+          background-color: white;
+          color: #434A54;
+          line-height: 80px;
+          display: flex;
+          padding: 0 10px;
+      }
+      .form-box__mask{
+          position: absolute;
+          bottom: 25px;
+          right: 100px;
+        .icon{
+            font-size: 25px;
+        }
+        .hidden{
+            display: none;
+        }
+      }
+      .form-box__submit{
+          height: 50px;
+          width: 80px;
+          margin: 15px 0 15px 15px;
+          background-color: #38AEF0;
+          font-size: 18px;
+          color: white;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     &__text-area{
         margin: auto 10px;
         height: 50px;
@@ -58,7 +117,7 @@
         line-height: 80px;
         display: flex;
         padding: 0 10px;
-      &__text{
+      &__message{
           color: #434A54;
           line-height: 50px;
       }
