@@ -3,20 +3,22 @@
   %div.contents
     %div.content-top
       %h2.content-top__group-name
-        group_name
+        = @group.name
         %div.content-top__group-name__member-name
-          kamiyahiroaki
+          Member : 
+          - @names.each do |name|
+            = name
+            ,
       %div.content-top__link-box
         %div.content-top__link-box__link-text
           Edit
-    %div.main-content
+    %div.messages
+      = render @messages
     %div.form-box
-      %div.form-box__text-area
-        %div.form-box__text-area__text
-          text_area
-        %label.form-box__text-area__link-box
-          %input.form-box__text-area__link-box--file{type: "file"}
-          =fa_icon "photo", class: 'form-box__text-area__link-box--photo-icon'
-      %div.form-box__sent-buttom
-        %div.form-box__sent-buttom__text
-          Sent
+      = form_for [@group, @message] do |f|
+        = f.text_field :contents, class: 'form-box__message', placeholder: 'type a message'
+        %div.form-box__mask
+          = f.label :image, class: 'form-box__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form-box__submit'
