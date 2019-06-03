@@ -10,8 +10,7 @@
             = name
             ,
       %div.content-top__link-box
-        %div.content-top__link-box__link-text
-          Edit
+        = link_to "Edit", edit_group_path(params[:group_id]), class: 'content-top__link-box__link-text'
     %div.messages
       = render @messages
     %div.form-box
