@@ -21,7 +21,6 @@ $(function(){
   }
   $("#new_message").on('submit', function(e){
     e.preventDefault();
-    console.log(this);
     var formData = new FormData(this);
     var url = $(this).attr('action');
     $.ajax({
@@ -35,7 +34,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
-      $('.form-box__message').val('')
+      $('.new_message')[0].reset()
       $button = $('.form-box__submit')
       $.rails.enableElement($button)
       $button.removeAttr('disabled')
