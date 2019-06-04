@@ -49,8 +49,6 @@ $(function(){
     var last_message_id = $('.message:last').data('id');
     var group_id = $('.contents').data('id');
     var url = `/groups/${group_id}/api/messages`
-    console.log(last_message_id)
-    console.log(url)
     $.ajax({
       url: url,
       type: 'get',
@@ -58,17 +56,15 @@ $(function(){
       data: { id: last_message_id }
     })
     .done(function(messages) {
-      // console.log(messages)
       var insertHTML = '';
       messages.forEach(function(message){
-        console.log(message)
         insertHTML = buildHTML(message)
         $('.messages').append(insertHTML)
       })
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   };
   setInterval(reloadMessages, 5000);
