@@ -1,6 +1,6 @@
 %body
   = render partial: '/shared/sidebar'
-  %div.contents
+  %div.contents{data: {id: (params[:group_id])}}
     %div.content-top
       %h2.content-top__group-name
         = @group.name
