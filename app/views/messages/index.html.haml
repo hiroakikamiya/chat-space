@@ -11,7 +11,7 @@
             ,
       %div.content-top__link-box
         = link_to "Edit", edit_group_path(params[:group_id]), class: 'content-top__link-box__link-text'
-    %div.messages
+    %div.messages{id: (params[:group_id])}
       = render @messages
     %div.form-box
       = form_for [@group, @message] do |f|
