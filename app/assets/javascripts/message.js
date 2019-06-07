@@ -47,20 +47,23 @@ $(function(){
 
   var reloadMessages = function() {
     var last_message_id = $('.message:last').data('id');
+    var changed_message_id = ( last_message_id != null )? last_message_id : "0" ;
     var group_id = $('.contents').data('id');
     var url = `/groups/${group_id}/api/messages`
+    console.log(url)
     $.ajax({
       url: url,
       type: 'get',
       dataType: 'json',
-      data: { id: last_message_id }
+      data: { id: changed_message_id }
     })
     .done(function(messages) {
       console.log(messages)
       var insertHTML = '';
       messages.forEach(function(message){
         insertHTML = buildHTML(message)
-        $('.messages').append(insertHTML)
+        var id = $('.contents').data('id');
+        $(`#${id}`).append(insertHTML)
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
       })
       
