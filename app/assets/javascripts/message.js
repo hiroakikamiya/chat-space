@@ -40,6 +40,9 @@ $(function(){
       $button.removeAttr('disabled')
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
     })
+    .fail(function(){
+      alert('error');
+    })
   });
 
   var reloadMessages = function() {
