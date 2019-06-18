@@ -66,7 +66,6 @@ $(function(){
         $(`#${id}`).append(insertHTML)
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
       })
-      
     })
   };
   setInterval(reloadMessages, 5000);
